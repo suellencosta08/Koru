@@ -1,0 +1,108 @@
+{% include 'headerCadastar.html' %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #f8f9fa; /* Cor de fundo para o corpo do documento */
+            color: #343a40; /* Cor do texto principal */
+        }
+
+        .form-group label {
+            color: #343a40; /* Cor do texto das labels dos inputs */
+        }
+
+        .footer {
+            background-color: #343a40; /* Cor de fundo do footer */
+            color: white; /* Cor do texto do footer */
+            text-align: center;
+            padding: 10px;
+       
+
+        /* Estilos para tablets */
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .form-control {
+                font-size: 16px; /* Tamanho da fonte dos inputs */
+            }
+            .btn-primary {
+                width: 100%; /* Botão de enviar ocupa a largura total */
+            }
+        }
+    </style>
+</head>
+<body>  
+    <div class="container mt-1">
+        <!-- Aplicando a classe ao título -->
+        <h1 class="text-center mb-1 text-white">Entre em Contato</h1>
+        <form id="contatoForm" action="{{ url_for('contato') }}" method="POST">
+            <div class="form-group">
+                <label for="nome"><b>Nome:</b></label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
+            
+                <label for="email"><b>E-mail:</b></label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            
+                <label for="telefone"><b>Telefone:</b></label>
+                <input type="tel" class="form-control" id="telefone" name="telefone" required>
+
+                <label for="mensagem"><b>Mensagem:</b></label>
+                <textarea class="form-control" id="mensagem" name="mensagem" rows="4" required></textarea>
+               
+                 <!-- Botão de enviar fora da div .form-group -->
+               <button type="submit" class="btn btn-primary" style="margin-top: 10px;">Enviar</button>
+            </div>
+        </form>
+    </div>
+    <!-- Footer -->
+    <div class="footer">
+        <p>Produzido por Hubble</p>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div class="modal fade" id="modalConfirmacao" tabindex="-1" role="dialog" aria-labelledby="modalConfirmacaoLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConfirmacaoLabel">Mensagem Enviada</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Sua mensagem foi enviada com sucesso!
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="okBtn">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+    <script>
+        // Quando o botão "OK" do modal for clicado, atualiza a página
+        document.getElementById('okBtn').addEventListener('click', function() {
+            window.location.reload();
+        });
+
+        // Quando o formulário for enviado com sucesso, exibe o modal de confirmação
+        document.getElementById('contatoForm').addEventListener('submit', function(event) {
+            $('#modalConfirmacao').modal('show');
+            event.preventDefault();
+        });
+    </script>
+</body>
+</html>

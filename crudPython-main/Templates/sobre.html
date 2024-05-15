@@ -1,0 +1,116 @@
+{% include 'headerSobreNos.html' %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galáxias</title>
+  <style>
+    /* Estilos para os botões */
+    .galaxy-list {
+      list-style: none; /* Remove os pontos da lista */
+      padding: 20px; /* Remove o espaçamento padrão da lista */
+    }
+
+    .galaxy-list li {
+      margin-bottom: 30px; /* Adiciona espaço entre os botões */
+    }
+
+    .galaxy-list li a {
+      display: block; /* Transforma os links em blocos completos */
+      border-radius: 10px; /* Deixa os botões completamente arredondados */
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      background-color: #fff; /* Adiciona cor de fundo branca */
+      margin: -10px; /* Remove a margem */
+      padding: 20px 40px;
+    }
+
+    .galaxy-list li a:hover {
+      background-color: #3498db;
+      color: #fff;
+    }
+
+    /* Estilos para o conteúdo da galáxia */
+    #galaxy-info {
+      margin-top: 20px;
+    }
+
+    #galaxy-info h2 {
+      color: #333;
+    }
+
+    #galaxy-info p {
+      color: #555;
+    }
+
+    /* Estilos para as imagens */
+    .galaxy-image {
+      width: 100px; /* Define um tamanho fixo para as imagens */
+      height: auto; /* Mantém a proporção da imagem */
+      border-radius: 10px; /* Adiciona bordas arredondadas às imagens */
+    }
+
+    /* Estilos para tablets */
+    @media (min-width: 768px) and (max-width: 1024px) {
+      /* Ajuste de margem para os botões */
+      .galaxy-list li a {
+        padding: 15px 30px; /* Reduz o padding dos botões */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lista de galáxias -->
+  <ul class="galaxy-list">
+    <li><button><a href="#" onclick="showGalaxyInfo('via_lactea')">Via Láctea</a></button></li>
+    <li><button><a href="#" onclick="showGalaxyInfo('andromeda')">Andrômeda</a></button></li>
+    <li><button><a href="#" onclick="showGalaxyInfo('triangulum')">Triângulo</a></button></li>
+  </ul>
+
+  <!-- Div onde a informação da galáxia será mostrada -->
+  <div id="galaxy-info"></div>
+
+  <script>
+    // Função para mostrar informações da galáxia
+    function showGalaxyInfo(galaxy) {
+      // Limpa o conteúdo anterior
+      document.getElementById('galaxy-info').innerHTML = '';
+      // Verifica qual galáxia foi clicada e exibe suas informações
+      if (galaxy === 'via_lactea') {
+        document.getElementById('galaxy-info').innerHTML = `
+          <h2>Via Láctea</h2>
+          <img src="https://img.odcdn.com.br/wp-content/uploads/2022/03/via-lactea-velha-capa.jpg" alt="Via Láctea">
+          <p>A Via Láctea é a galáxia onde está localizado o Sistema Solar, do qual a Terra faz parte.</p>
+          <p>É uma espiral barrada e a segunda maior galáxia do Grupo Local, após a Galáxia Andrômeda.</p>
+        `;
+      } else if (galaxy === 'andromeda') {
+        document.getElementById('galaxy-info').innerHTML = `
+          <h2>Andrômeda</h2>
+          <img src="https://www.infoescola.com/wp-content/uploads/2013/01/andromeda.jpg" alt="Andrômeda">
+          <p>A Galáxia de Andrômeda é a galáxia espiral mais próxima da Via Láctea e é a maior galáxia do Grupo Local.</p>
+          <p>É uma das poucas galáxias que podem ser vistas a olho nu da Terra.</p>
+        `;
+      } else if (galaxy === 'triangulum') {
+        document.getElementById('galaxy-info').innerHTML = `
+          <h2>Triângulo</h2>
+          <img src="https://i.ytimg.com/vi/IBKVEnT7ZWI/maxresdefault.jpg" alt="Triângulo">
+          <p>A Galáxia Triângulo é uma galáxia espiral localizada no Grupo Local, próximo da Via Láctea e de Andrômeda.</p>
+          <p>É uma das menores galáxias do Grupo Local e é facilmente observável a partir da Terra.</p>
+        `;
+      }
+    }
+  </script>
+
+  <!-- Botão para voltar ao início -->
+  <ul class="galaxy-list">
+    <li><button><a href="#" onclick="showGalaxyInfo('inicio')">Voltar ao início</a></li></button>
+  </ul>
+
+   
+  {%include 'footer.html'%}
+</body>
+</html>

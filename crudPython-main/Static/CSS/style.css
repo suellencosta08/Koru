@@ -1,0 +1,220 @@
+html {
+    border: 0;
+}
+
+header {
+ margin:0;
+}
+
+img {
+    max-width: 100%;
+    height: 50px;
+}
+
+/* Alinhamento dos botões à esquerda */
+.navbar-nav {
+    margin-right: auto;
+    height: 0px;
+}
+.navbar{
+    content: 1px;
+    height: 60px;
+}
+
+.navbar-nav .nav-item {
+   margin-right: 10px;
+   margin-top: 40px;
+}
+
+/* Adicionando borda aos botões */
+.nav-link {
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.EditarH1{
+    margin-top: 50px;
+}
+.container {
+    flex: 1;
+    margin-bottom: 120px;
+}
+
+/* Estilo para o footer */
+footer {
+    position: absolute; 
+    width: 100%; /* Largura total */
+    height: 120px; /* Altura do footer */
+    background-color: #343a40; /* Cor de fundo do footer */
+    color: white; /* Cor do texto */
+    bottom: 0; /* Alinhar o footer na parte inferior */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.FooterImagens {
+    display: inline;
+    margin: 10px;
+    margin-left: 40px;
+    margin-top: 20px;
+    line-height: 0.5rem;
+}
+
+.FooterTitulo {
+    display: inherit;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    border-bottom: #FFF 1px solid;
+    height: 50%;
+    margin-top: 5%;
+}
+
+.FooterLinks {
+    position:static; /* Posiciona em relação ao footer */
+    right: 40px; /* Distância da direita */
+    bottom: 18px; /* Alinha na parte inferior do footer */
+    display: flex;
+    flex-direction: column; /* Alinha os elementos em coluna */
+    align-items: center; /* Centraliza os elementos horizontalmente */
+    gap: 4px; /* Espaçamento entre os elementos */
+}
+
+.FooterLinks p {
+    margin-bottom: 2px; /* Remove a margem padrão do parágrafo */
+}
+
+.FooterLinks a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #e7e5c1
+}
+
+.Pfooter {
+    margin: 0;
+    display: inline;
+}
+/* Adicionando borda aos botões */
+.nav-link {
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 10px 15px; /* Aumenta o padding */
+    transition: background-color 0.3s ease; /* Adiciona transição para a cor de fundo */
+  }
+  
+.nav-link:hover {
+    background-color: #1e2227; /* Cor azul escura no hover */
+    color: #fff; /* Cor do texto no hover */
+  }
+  
+.card-title {
+    background-color: #6c757d !important;
+    color: #fff;
+}
+.card-body {
+    border: 2px solid #1e2227; /* Cor da borda */
+    border-radius: 10px; /* Raio da borda para torná-la mais arredondada */
+    padding: 20px; /* Espaçamento interno para o conteúdo não ficar muito próximo da borda */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidade */
+}
+
+/* Estilos Iniciais para Dispositivos Móveis (Mobile First) */
+
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Define um tamanho de fonte padrão */
+    line-height: 1.6; /* Define uma altura de linha padrão */
+    margin: 0;
+    padding: 0;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 1rem; /* Adiciona um espaçamento padrão abaixo dos títulos */
+}
+
+/* Layout Responsivo */
+.container {
+    width: 100%; /* Ocupa toda a largura do viewport */
+    padding: 0 15px; /* Adiciona um pequeno espaço nas laterais */
+    margin: 0 auto; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Espaçamento Vertical */
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-3 {
+    margin-top: 1rem;
+}
+
+/* Espaçamento Horizontal */
+.mx-1 {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+}
+
+.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+.mx-3 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* Espaçamento em Todos os Lados */
+.m-1 {
+    margin: 0.25rem;
+}
+
+.m-2 {
+    margin: 0.5rem;
+}
+
+.m-3 {
+    margin: 1rem;
+}
+
+/* Estilos para telas maiores (desktops) */
+@media only screen and (min-width: 768px) {
+    body {
+        font-size: 18px; /* Aumentar o tamanho da fonte */
+    }
+    .footer{
+        position: fixed;
+    }
+    /* Adicione aqui estilos específicos para telas maiores, se necessário */
+}
+
+/* Estilos para telas menores (dispositivos móveis) */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 14px; /* Reduzir o tamanho da fonte */
+    }
+    
+    /* Adicione aqui estilos específicos para telas menores, se necessário */
+}
+
+/* Estilos para telas muito pequenas (ex: smartphones em modo paisagem) */
+@media only screen and (max-width: 480px) {
+    body {
+        font-size: 12px; /* Reduzir ainda mais o tamanho da fonte */
+    }
+    .footer{
+        position: fixed;
+    }
+    .FooterImagens img{
+        height: 20px;
+    }
+
+    /* Adicione aqui estilos específicos para telas muito pequenas, se necessário */
+}

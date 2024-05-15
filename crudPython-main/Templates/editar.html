@@ -1,0 +1,75 @@
+{% include 'headerCadastar.html' %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Galáxia</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Link para o CSS personalizado -->
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}">
+
+    <style>
+        /* Estilos para tablets */
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .card {
+                margin-top: 20px; /* Espaçamento superior */
+                padding: 20px; /* Espaçamento interno */
+            }
+            .form-group label {
+                font-size: 16px; /* Tamanho da fonte dos rótulos */
+            }
+            .form-control {
+                font-size: 16px; /* Tamanho da fonte dos inputs */
+            }
+            .btn-primary, .btn-secondary {
+                width: 100%; /* Botões ocupam a largura total */
+            }
+        }
+        .footer{
+            position:relative;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inclui o header -->
+  
+    <div class="container mt-4">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title text-center bg-light p-2 mb-4">Editar Galáxia</h1>
+                <form action="{{ url_for('atualizar', id=id) }}" method="post">
+                    <div class="form-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" class="form-control" id="nome" name="nome" value="{{ galaxia['nome'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="estrela">Estrela Principal:</label>
+                        <input type="text" class="form-control" id="estrela" name="estrela" value="{{ galaxia['estrelaPrincipal'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="distancia">Distância:</label>
+                        <input type="text" class="form-control" id="distancia" name="distancia" value="{{ galaxia['distancia'] }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imagem">Imagem (URL):</label>
+                        <input type="text" class="form-control" id="imagem" name="imagem" value="{{ galaxia['imagem'] }}" required>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary">Atualizar</button>
+                        <a href="{{ url_for('home') }}" class="btn btn-secondary">Cancelar</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Inclui o footer -->
+    {% include 'footer.html' %}
+    <!-- Bootstrap JS e dependências -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+ /* Exemplo de estilos responsivos */
+
+   /* Estilos para telas pequenas (telefones) */
+   @media (max-width: 576px) {
+    /* Exemplo: Ajustar o tamanho do texto */
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Estilos para telas médias (tablets) */
+@media (min-width: 576px) and (max-width: 992px) {
+    /* Exemplo: Ajustar a largura máxima de um contêiner */
+    .container {
+        max-width: 90%;
+    }
+}
+
+/* Estilos para telas grandes (desktops) */
+@media (min-width: 992px) {
+    /* Exemplo: Ajustar margens e preenchimentos */
+    .conteudo {
+        margin: 20px;
+        padding: 10px;
+    }
+}

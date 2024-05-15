@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HUBBLE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif;
+        }
+
+        body,
+        html {
+            height: 100%;
+            color: #959393;
+            line-height: 1.8;
+        }
+
+        /* Create a Parallax Effect */
+        .bgimg-1,
+        .bgimg-2,
+        .bgimg-3 {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* First image (Logo. Full height) */
+        .bgimg-1 {
+            background-image: url('https://get.pxhere.com/photo/galaxy-astronomical-object-astronomy-outer-space-atmosphere-star-nebula-space-1366710.jpg');
+            min-height: 100%;
+        }
+
+        .w3-wide {
+            letter-spacing: 10px;
+        }
+
+        .w3-hover-opacity {
+            cursor: pointer;
+        }
+
+        /* Estilos para tablets */
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            /* Ajustes para o texto central */
+            .w3-display-middle {
+                margin-top: 100px;
+            }
+
+            /* Ajustes para os botões */
+            .w3-padding-large {
+                margin-top: 50px;
+            }
+
+            /* Ajustes para o tamanho dos botões */
+            .w3-button {
+                padding: 10px 20px;
+                font-size: 14px;
+                margin: 10px; /* Adiciona espaço entre os botões */
+            }
+
+             /* Ajustes para os botões */
+            .w3-display-middle {
+                margin-top: -100px !important; /* !important para garantir que a regra seja aplicada */
+            }
+
+            .w3-padding-large {
+                margin-top: 50px !important; /* !important para garantir que a regra seja aplicada */
+            }
+
+            /* Ajustes para o tamanho dos botões */
+            .w3-button {
+                padding: 10px 20px !important; /* !important para garantir que a regra seja aplicada */
+                font-size: 14px !important; /* !important para garantir que a regra seja aplicada */
+                margin: 10px !important; /* !important para garantir que a regra seja aplicada */
+            }
+                }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar" id="myNavbar">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+            <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+                <i class="fa fa-search"></i>
+            </a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium"></div>
+    </div>
+
+    <!-- First Parallax Image with Logo Text -->
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+        <div class="w3-display-middle" style="white-space:nowrap;">
+            <span class="w3-center w3-padding-large w3-black w3-xxlarge w3-wide w3-animate-opacity">
+                <span class="w3-hide-small">BEM-VINDO À</span> WIKI HUBBLE
+            </span>
+        </div>
+        <!-- Botões centralizados no meio da imagem com espaço adicional -->
+        <div class="w3-display-middle w3-padding-large w3-center" style="margin-top: 150px;">
+            <a href="/sobreNos" class="w3-button w3-medium w3-black w3-text-white w3-border w3-border-black">ACESSE A HOME</a>
+            <a href="/cadastrar" class="w3-button w3-medium w3-black w3-text-white w3-border w3-border-black">CONTRIBUA COM UMA NOVA GALÁXIA</a>
+        </div>
+    </div>
+
+</body>
+</html>

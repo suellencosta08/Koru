@@ -1,0 +1,78 @@
+{% include 'headerCadastar.html' %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}">
+    <!-- Título da página -->
+    <title>GALÁXIAS</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Título da página -->
+        <h1 class="text-center">Listar todos os itens cadastrados</h1>
+        
+        <!-- Tabela responsiva -->
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <!-- Cabeçalho da tabela -->
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Estrela Principal</th>
+                        <th scope="col">Distância</th>
+                        <th scope="col">Imagem</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Loop para exibir os dados da tabela -->
+                    {% for galaxia in dados %}
+                    <tr>
+                        <td>{{ galaxia[0] }}</td>
+                        <td>{{ galaxia[1] }}</td>
+                        <td>{{ galaxia[2] }}</td>
+                        <td>{{ galaxia[3] }}</td>
+                        <td><img src="{{ galaxia[4] }}" alt="Imagem da Galáxia"></td>
+                        <td>
+                            <!-- Botões para editar e deletar -->
+                            <div class="btn-group" role="group">
+                                <form action="{{ url_for('editar', id=galaxia[0]) }}" method="get">
+                                    <button type="submit" class="btn btn-primary">Editar</button>
+                                </form>
+                                <form action="{{ url_for('deletar_galaxia_route', id=galaxia[0]) }}" method="post">
+                                    <button type="submit" class="btn btn-danger">Deletar</button>
+                                </form>
+                            </div>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- Botões de ação -->
+        <div class="d-flex justify-content-center mt-3">
+            <div class="mr-2">
+                <form action="{{ url_for('criar') }}" method="GET">
+                    <button type="submit" class="btn btn-primary">Cadastrar Nova</button>
+                </form>
+            </div>
+            <div>
+                <form action="{{ url_for('sobre') }}" method="GET">
+                    <button type="submit" class="btn btn-primary">Sobre Galaxia</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+    {% include 'footer.html' %}
+</body>
+</html>

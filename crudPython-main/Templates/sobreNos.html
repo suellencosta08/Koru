@@ -1,0 +1,171 @@
+{% include 'headerSobreNos.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hubble</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background: #010327;
+  color: white;
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Sticky navbar */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Active/current link */
+.navbar a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%;
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%;
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - tablets */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /* Mostrar o header */
+  .header {
+    display: block;
+    padding: 50px; /* Reduzir o padding do header */
+  }
+
+  /* Reduzir o padding dos links do navbar */
+  .navbar a {
+    padding: 10px 15px;
+  }
+
+  /* Ajustar a largura e o padding da sidebar e da main column */
+  .side, .main {
+    width: 100%;
+    padding: 10px;
+  }
+
+  /* Reduzir o tamanho da fonte do heading no header */
+  .header h1 {
+    font-size: 30px;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Hubble Software house</h1>
+</div>
+
+<div class="row">
+  <div class="side">
+     <br>
+    <img src="https://canela.spaceadventure.com.br/wp-content/uploads/2020/05/Hubble-em-orbita.jpg"  style="height: 200px;">
+<br>
+ 
+<br>
+  <div style="text-align: justify-self">
+    <img src="//cdn-icons-png.flaticon.com/256/20/20673.png" alt="Descrição da imagem" style="width: 40px; height: auto;">
+    <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt="Descrição da imagem" style="width: 40px; height: auto;">
+    <img src="https://w7.pngwing.com/pngs/567/358/png-transparent-white-and-black-phone-logo-whatsapp-computer-icons-mobile-phones-logo-black-and-white-text-silhouette-instant-messaging.png" alt="Descrição da imagem" style="width: 40px; height: auto;">
+
+  </div>
+    
+  </div>
+  <div class="main">
+    <h2>Hubble</h2>
+<p>A Hubble nasceu da união de mentes criativas e apaixonadas por tecnologia que se cruzaram no curso da Koru. Fundada por um grupo de amigos com um objetivo comum, a empresa se destaca não apenas pela excelência técnica, mas também pela conexão profunda entre seus membros.</p>
+<p>Na Hubble, cada linha de código é impregnada com a amizade e a confiança que surgiram durante anos de colaboração e aprendizado conjunto. Com uma cultura baseada na camaradagem e no respeito mútuo, nossa equipe se esforça para superar desafios, alcançar novos patamares e entregar soluções que impactam positivamente a vida das pessoas.</p>
+<p>Nossa jornada começou com um sonho compartilhado: criar tecnologia que faça a diferença. Desde então, temos trabalhado incansavelmente para transformar essa visão em realidade. Cada projeto que abraçamos é uma oportunidade de inovar, aprender e crescer juntos.</p>
+<p>Na Hubble, não somos apenas colegas de trabalho; somos uma família unida pelo amor à programação, ao design e à criação de experiências digitais excepcionais. Nossa dedicação à qualidade e à excelência é evidente em cada produto que lançamos e em cada linha de código que escrevemos.</p>
+<p>Estamos espalhados pelo Brasil e operamos de forma remota, conectando talentos de diversas regiões do país. Com uma abordagem ágil e flexível, aproveitamos as vantagens do trabalho remoto para construir uma equipe diversificada e colaborativa.</p>
+<p>À medida que continuamos nossa jornada, estamos comprometidos em manter os valores que nos trouxeram até aqui: integridade, trabalho em equipe e paixão pelo que fazemos. Com o apoio uns dos outros e o compromisso com a inovação, acreditamos que o céu é o limite para a Hubble.</p>
+<p>Junte-se a nós nesta emocionante jornada em direção ao futuro da tecnologia. Seja bem-vindo à Hubble, onde a amizade e a paixão pela tecnologia se unem para criar algo extraordinário.</p>
+<br>
+</div>
+</div>
+
+<div class="footer">
+  <h2>© 2024 Hubble Company, Inc</h2>
+</div>
+
+</body>
+</html>

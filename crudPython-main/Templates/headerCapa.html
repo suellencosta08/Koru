@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o CSS personalizado -->
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #343a40; /* Cor de fundo do header */
+            color: white; /* Cor do texto do header */
+            padding: 10px 0;
+        }
+
+        .navbar {
+            padding: 0 10px;
+        }
+
+        .navbar-nav {
+            flex-direction: row; /* Alinha os itens na horizontal */
+        }
+
+        .nav-link {
+            padding: 10px 15px;
+        }
+        
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .navbar-nav {
+                flex-direction: column; /* Alinha os itens na vertical */
+            }
+
+            .nav-link {
+                padding: 10px 0;
+                text-align: center;
+            }
+
+            .navbar-nav .nav-item {
+                margin-bottom: 10px; /* Adiciona espaço entre os botões */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link font-weight-bold" href="/">INÍCIO <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link font-weight-bold" href="/">GALERIA <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link font-weight-bold" href="/contato">CONTATO</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

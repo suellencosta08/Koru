@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link para o seu CSS personalizado -->
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/style.css')}}">
+
+    <style>
+        /* Estilos para tablets */
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            .FooterImagens {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .FooterImagens img {
+                width: 40px;
+                margin: 0 10px;
+            }
+            .FooterTitulo, .FooterLinks {
+                text-align: center;
+                margin-top: 20px;
+            }
+            .FooterLinks {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+
+<!-- Rodapé -->
+<footer class="footer">
+    <div class="FooterImagens">
+         <b><p>Siga-nos</p></b>
+         <img src="https://img.freepik.com/free-vector/twitter-new-2023-x-logo-white-background-vector_1017-45422.jpg?w=740&t=st=1714165226~exp=1714165826~hmac=3cd45fc69b5b76746fcb82051a49db4a45b18f163a0abd24c1611edbe81daeca" alt="Twitter">         
+         <img src="https://img.freepik.com/psd-gratuitas/icone-3d-para-aplicativo-de-midia-social_23-2150049579.jpg?w=740&t=st=1714165363~exp=1714165963~hmac=881a3e08e8b25f5f7622741a9a7da71a0ab66176f5dc085d44ce5c4365ca12e2" alt="Twitter">
+         <img src="https://img.freepik.com/vetores-gratis/instagram-fundo-em-cores-gradientes_23-2147823814.jpg" alt="Instagram">
+    </div>
+    <div class="FooterTitulo">
+        <p>© 2024 Hubble Company, Inc</p> 
+    </div>
+    <div class="FooterLinks">
+         <b><p>Mapa do site</p></b>
+         <a href="/sobreNos">Sobre nós</a>
+         <a href="/contato">Contato</a>
+         <a href="/sobre">Sobre as Galaxias</a>
+    </div>
+</footer>
+</html>
